@@ -1,6 +1,4 @@
-import { expect, type Locator, type Page } from '@playwright/test';
-import { User } from '../test-data/LoginData';
-import { LoadHookContext } from 'module';
+import {type Locator, type Page } from '@playwright/test';
 
 export class Navbar {
 
@@ -9,6 +7,8 @@ export class Navbar {
         ,deleteAccount: Locator
         ,signup: Locator
         ,logout: Locator
+        ,contactUs: Locator
+        ,testCases: Locator
     }
 
     constructor(page: Page) {
@@ -18,6 +18,8 @@ export class Navbar {
             ,deleteAccount: page.locator('ul.navbar-nav > li > a:has(i.fa-trash-o)')
             ,signup: page.locator('ul.navbar-nav > li > a:has(i.fa-lock)')
             ,logout: page.locator('ul.navbar-nav > li > a:has(i.fa-lock)')
+            ,contactUs: page.locator('a[href="/contact_us"]')
+            ,testCases: page.locator('ul.navbar-nav > li > a[href="/test_cases"]:has(i.fa-list)')
         }
     }
 }
