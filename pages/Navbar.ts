@@ -9,6 +9,7 @@ export class Navbar {
         ,logout: Locator
         ,contactUs: Locator
         ,testCases: Locator
+        ,products: Locator
     }
 
     constructor(page: Page) {
@@ -20,6 +21,7 @@ export class Navbar {
             ,logout: page.locator('ul.navbar-nav > li > a:has(i.fa-lock)')
             ,contactUs: page.locator('a[href="/contact_us"]')
             ,testCases: page.locator('ul.navbar-nav > li > a[href="/test_cases"]:has(i.fa-list)')
+            ,products: page.locator('a[href="/products"]')
         }
     }
 }
